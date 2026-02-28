@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasilia Racing - Performance Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--primary:#E10600;
+--primary-dark:#B80000;
+--bg:#0B0B0B;
+--surface:#141414;
+--surface-2:#1A1A1A;
+--border:#262626;
+--text:#FFFFFF;
+--text-secondary:#D0D0D0;
+--text-meta:#9A9A9A;
+--radius:12px;
+--transition:180ms ease;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 60px;
+background:rgba(10,10,10,0.8);
+backdrop-filter:blur(8px);
+border-bottom:1px solid var(--border);
+z-index:1000;
+}
+.logo{
+font-family:'Oswald',sans-serif;
+font-size:28px;
+letter-spacing:2px;
+color:var(--primary);
+}
+.nav-links a{
+margin:0 15px;
+text-decoration:none;
+color:var(--text-secondary);
+font-size:14px;
+text-transform:uppercase;
+transition:var(--transition);
+}
+.nav-links a:hover{color:var(--primary)}
+
+/* HERO */
+.hero{
+margin-top:72px;
+position:relative;
+height:520px;
+background:url('https://images.unsplash.com/photo-1502877338535-766e1452684a') center/cover;
+display:flex;
+align-items:flex-end;
+padding:60px;
+}
+.hero-overlay{
+position:absolute;
+top:0;left:0;width:100%;height:100%;
+background:linear-gradient(to top,rgba(0,0,0,0.85),rgba(0,0,0,0.2));
+}
+.hero-content{
+position:relative;
+max-width:800px;
+}
+.badge{
+display:inline-block;
+padding:6px 14px;
+background:var(--primary);
+border-radius:50px;
+font-size:12px;
+text-transform:uppercase;
+margin-bottom:15px;
+}
+.hero h1{
+font-family:'Oswald',sans-serif;
+font-size:48px;
+line-height:1.1;
+margin-bottom:15px;
+}
+.meta{
+color:var(--text-meta);
+font-size:14px;
+}
+
+/* GRID */
+.section{
+padding:80px 60px;
+}
+.section h2{
+font-family:'Oswald',sans-serif;
+font-size:32px;
+margin-bottom:40px;
+}
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+gap:30px;
+}
+.card{
+background:var(--surface);
+border-radius:var(--radius);
+overflow:hidden;
+transition:var(--transition);
+border:1px solid var(--border);
+}
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(225,6,0,0.2);
+}
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+.card-content{
+padding:20px;
+}
+.card h3{
+font-family:'Oswald',sans-serif;
+font-size:22px;
+margin-bottom:10px;
+}
+.card p{
+font-size:14px;
+color:var(--text-secondary);
+margin-bottom:15px;
+}
+.card .meta{font-size:12px}
+
+/* SPONSORS */
+.sponsors{
+background:var(--surface-2);
+padding:60px;
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+border-top:1px solid var(--border);
+}
+.sponsor{
+width:160px;
+height:80px;
+background:var(--bg);
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:8px;
+border:1px solid var(--border);
+transition:var(--transition);
+}
+.sponsor:hover{transform:scale(1.05);border-color:var(--primary)}
+
+/* FOOTER */
+.footer{
+padding:40px 60px;
+background:#050505;
+border-top:1px solid var(--border);
+color:var(--text-meta);
+font-size:14px;
+}
+
+@media(max-width:768px){
+.navbar{padding:0 20px}
+.section{padding:60px 20px}
+.hero{padding:30px;height:400px}
+.hero h1{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<div class="logo">BRASILIA RACING - O SEU PORTAL DE AUTOMOBILISMO DO DF</div>
+<div class="nav-links">
+<a href="#">F1</a>
+<a href="#">KART</a>
+<a href="#">ENDURANCE</a>
+<a href="#">DF</a>
+<a href="#">ENTREVISTAS</a>
+</div>
+</div>
+
+<section class="hero">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="badge">Destaque</div>
+<h1>Piloto brasiliense conquista vitória histórica no campeonato regional</h1>
+<div class="meta">Por Redação • 5 min de leitura</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Últimas Notícias</h2>
+<div class="news-grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+<div class="card-content">
+<h3>Equipe local anuncia novo carro para temporada</h3>
+<p>Preparação intensa marca os bastidores do automobilismo no DF.</p>
+<div class="meta">3 min de leitura</div>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def">
+<div class="card-content">
+<h3>Kartódromo recebe etapa decisiva do campeonato</h3>
+<p>Evento promete velocidade e disputas acirradas.</p>
+<div class="meta">4 min de leitura</div>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
+<div class="card-content">
+<h3>Entrevista exclusiva com jovem promessa</h3>
+<p>Conheça os planos do piloto para o futuro.</p>
+<div class="meta">6 min de leitura</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sponsors">
+<div class="sponsor">Patrocinador</div>
+<div class="sponsor">Patrocinador</div>
+<div class="sponsor">Patrocinador</div>
+<div class="sponsor">Patrocinador</div>
+</section>
+
+<footer class="footer">
+© 2026 Brasilia Racing • Portal Oficial de Automobilismo do DF
+</footer>
+
+</body>
+</html>
